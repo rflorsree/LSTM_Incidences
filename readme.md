@@ -26,7 +26,7 @@ LSTM_Prediccion_Incidencias/
 ## Entrenamiento del Modelo
 
 El archivo `scripts/train_lstm.py` entrena una red MLP con los siguientes datos:
-- **Input**: día de la semana (de la fecha), y causa (codificada)
+- **Input**: fecha, y causa (codificada)
 - **Output**:
   - Número de incidencias
   - Número de clientes afectados
