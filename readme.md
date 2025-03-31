@@ -64,3 +64,6 @@ Instala las dependencias necesarias:
 ```bash
 pip install tensorflow pandas numpy scikit-learn openpyxl joblib
 ```
+---
+Referencias:
+https://github.com/harimkang/LSTM-Prediction
