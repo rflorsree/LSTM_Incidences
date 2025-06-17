@@ -162,17 +162,19 @@ df_metrics = pd.DataFrame({
 })
 
 # Guardar CSV y PNG de la tabla
-df_metrics.to_csv("outputs/lstm_metrics_completas.csv", index=False)
+formatted_values = df_metrics.copy()
+formatted_values[df_metrics.columns[1:]] = df_metrics[df_metrics.columns[1:]].applymap(lambda x: f"{x:.2f}")
 
+# Crear y guardar la tabla como imagen
 fig, ax = plt.subplots(figsize=(10, 2))
 ax.axis('tight')
 ax.axis('off')
-table = ax.table(cellText=df_metrics.values, colLabels=df_metrics.columns, cellLoc='center', loc='center')
+table = ax.table(cellText=formatted_values.values, colLabels=formatted_values.columns, cellLoc='center', loc='center')
 table.scale(1, 2)
 table.auto_set_font_size(False)
 table.set_fontsize(10)
 plt.tight_layout()
-plt.savefig("outputs/lstm_metrics_table.png", dpi=300)
+plt.savefig("outputs/gru_metrics_table.png", dpi=300)
 plt.close()
 
 # MAE comparativo

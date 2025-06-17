@@ -14,10 +14,11 @@ clientes_aprox = float(os.getenv("CLIENTES_APROX"))
 tm_muerto_aprox = float(os.getenv("TM_MUERTO_APROX"))
 tm_resolucion_aprox = float(os.getenv("TM_RESOLUCION_APROX"))
 minutos_respuesta = float(os.getenv("MINUTOS_RESPUESTA"))
+hora_inicio = float(os.getenv("hora_inicio"))
 
 # Fecha objetivo
 fecha_str = "2025-04-02"
-hora_inicio = 10
+
 
 # Procesar fecha
 fecha = pd.to_datetime(fecha_str)
