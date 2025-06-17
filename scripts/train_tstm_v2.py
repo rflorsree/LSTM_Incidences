@@ -174,7 +174,7 @@ table.scale(1, 2)
 table.auto_set_font_size(False)
 table.set_fontsize(10)
 plt.tight_layout()
-plt.savefig("outputs/gru_metrics_table.png", dpi=300)
+plt.savefig("outputs/ltsm_table.png", dpi=300)
 plt.close()
 
 # MAE comparativo
